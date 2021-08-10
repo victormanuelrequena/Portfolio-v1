@@ -13,9 +13,10 @@ const WorkTextStyled = styled.div`
 	background: var(--light-navy);
 	.work-text {
 		color: var(--light-slate);
-		font-size: 0.74rem;
+		font-size: 15px;
 		font-family: 'Inter', sans-serif;
-		font-weight: 300;
+		font-weight: 400;
+		line-height: 26px;
 	}
 	@media screen and (max-width: 768px) {
 		margin: 0;
@@ -30,10 +31,10 @@ const WorkTextStyled = styled.div`
 	}
  `;
 
- export default function WorkText() {
+ export default function WorkText({ description }) {
  	return (
  		<WorkTextStyled>
- 			<p className="work-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem praesentium iusto sunt debitis, earum animi illum perspiciatis laboriosam asperiores, optio libero incidunt doloremque ullam architecto a vitae nobis tempore nesciunt?</p>
+ 			<p className="work-text">{description}</p>
  		</WorkTextStyled>
  	)
  }

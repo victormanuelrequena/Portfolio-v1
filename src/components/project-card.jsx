@@ -81,9 +81,9 @@ const ProjectCardStyled = styled.div`
  		min-height: 60%;
  		color: var(--slate);
  		font-family: 'inter', sans-serif;
- 		font-size: 0.74rem;
- 		font-weight: 500;
- 		padding: .8em;
+ 		font-size: 17px;
+ 		font-weight: 300;
+ 		padding: .0em .0em .8em .0em;
  	}
  	.tech-box {
  		// border: 1px solid red;

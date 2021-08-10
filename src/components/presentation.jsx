@@ -2,11 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 const PresentationStyled = styled.div`
-	// border: 1px solid red;
 	width: 84%;
-	height: 80vh;
+	min-height: 80vh;
 	margin: auto;
-
+	padding-bottom: 16em;
 	.presentation-box {
 		// border: 1px solid red;
 		width: 90%;
@@ -55,6 +54,7 @@ const PresentationStyled = styled.div`
 	}
 	@media screen and (max-width: 765px) {
 		width: 96%;
+		padding-left: 2em;
 		.presentation-box {
 			width: 100%;
 			height: 100%;

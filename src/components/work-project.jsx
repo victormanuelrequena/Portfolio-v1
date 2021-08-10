@@ -6,7 +6,8 @@ import WorkInfo from './work-info';
 const WorkProjectStyled = styled.div` 
 	// border: 1px solid white;
 	width: 100%;
-	height: 60vh;
+	min-height: 380px;
+	padding: 1.4em 0;
 	display: grid;
 	grid-template-columns: ${({ reverse }) => reverse ? '40% 60%' : '60% 40%'};
 	grid-template-areas: 'image text';
@@ -23,11 +24,18 @@ const WorkProjectStyled = styled.div`
 
  `;
 
-export default function WorkProject({ projectName, statusProject, reverse }) {
+export default function WorkProject({
+   projectName,
+   statusProject,
+   reverse,
+   path,
+   techList,
+   description
+    }) {
 	return (
 		<WorkProjectStyled reverse={reverse}>
 		<WorkImage
-		path="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+		path={path}
 		reverse={reverse}
 		/>
 
@@ -35,6 +43,8 @@ export default function WorkProject({ projectName, statusProject, reverse }) {
 		statusProject={statusProject}
 		projectName={projectName}
 		reverse={reverse}
+		techList={techList}
+		description={description}
 		/>
 		</WorkProjectStyled>
 	)

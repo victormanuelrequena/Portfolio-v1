@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const MenuNavMobileStyled = styled.div`
 	position: fixed;
 	top: 0;
-	z-index: 999;
+	z-index: 1000;
 	width: 100vw;
 	min-height: 100vh;
 	// border: 2px solid red;
@@ -21,6 +21,7 @@ const MenuNavMobileStyled = styled.div`
  		background: var(--navy);
  		transition: .4s;
  		transform: translateX(0%);
+ 		z-index: 1;
  	}
  `;
 
@@ -30,6 +31,13 @@ const MenuNavMobile = ({ isMobile }) => {
 			{
 				isMobile ?
 				<nav className="nav-mobile">
+				<ul>
+					<li><a className="menu-tag about" href="#about">About</a></li>
+					<li><a className="menu-tag experience" href="#experience">Experience</a></li>
+					<li><a className="menu-tag work" href="#work">Work</a></li>
+					<li><a className="menu-tag contact" href="#contact">Contact</a></li>
+					<li className="resume">Resume</li>
+				</ul>
 				</nav>
 				: null
 			}

@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import WorkText from './work-text';
 import UsageTech from './usage-tech';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import LaunchIcon from '@material-ui/icons/Launch';
 
 const WorkInfoStyled = styled.div`
 	// border: 1px solid green;
@@ -40,7 +42,7 @@ const WorkInfoStyled = styled.div`
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		background: rgba(24,49,80,.90);
+		background: rgba(13,34,54, .8);
 		// grid-area: ${({ reverse }) => reverse ? 'text': 'text'};
 		align-items: ${({ reverse }) => reverse ? 'flex-start' : 'flex-start'};
 		.wrapper-mobile {
@@ -63,22 +65,45 @@ const WorkInfoStyled = styled.div`
 			display: block;
 			padding: 4% 0;
 			padding-left: 1em;
+			color: white;
 		}
+	}
+	.enlaces-project {
+		display: block;
+		text-align: ${({reverse}) => reverse ? 'start' : 'end'};
+		width: 100%;
+		margin: 0 auto;
+		margin-top: 1em;
 	}
  `;
 
- export default function WorkInfo({statusProject, projectName, reverse}) {
+ export default function WorkInfo({statusProject,
+  projectName,
+   reverse,
+    techList,
+	description
+	}) {
 
  	return (
  	<WorkInfoStyled reverse={reverse}>
  			<div className="wrapper-mobile">
  			<p className="status-project">{statusProject}</p>
 			<strong className="project-name">{projectName}</strong>
-			<WorkText />
+			<WorkText
+			description={description}
+			/>
 			<UsageTech
 			primaryCard={true}
-			techList={['React', 'Express.js', 'MongoDB']}
+			techList={techList}
 			/>
+			<div className="enlaces-project">
+			<a href="">
+			<GitHubIcon style={{color: '#a8b2d1', marginRight: '1em'}} />
+			</a>
+			<a href="">
+			<LaunchIcon style={{color: '#a8b2d1'}} />
+			</a>
+			</div>
  			</div>
  	</WorkInfoStyled>
  	)

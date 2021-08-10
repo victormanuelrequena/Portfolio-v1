@@ -18,12 +18,12 @@ const ExperienceStyled = styled.div`
 	width: 50%;
 	height: 80%;
 	margin: 0 auto;
-	padding: 6em 0em 10em 0em;
+	padding: 8em 1em 12em 1em;
 	.experience {
 		color: var(--light-slate);
 		font-size: 28px;
 		position: relative;
-		padding: 1em 0em 1em 0em;
+		padding: 1em 1em 1em 1em;
 		margin: 0;
 	}
 	.experience::before {
@@ -160,7 +160,7 @@ export default function Experience() {
 			<ExperienceText
 			company='Zeven Software'
 			cargue="Frontend developer"
-			text="Write modern, performant, maintainable code for a diverse array of client and internal projects Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript, Gatsby, React, Craft, WordPress, Prismic, and Netlify Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis"
+			text="Working for the Venezuelan-American company zevenSoftware, in which I am part of the development team as a frontend developer, working with modern frameworks such as Reactjs consuming APIs and implementing unit tests and ETE with testing libraries such as Jest, was a very edifying experience for me and all the goals set as a team were met."
 			/>
 			</Route>
 			</Switch>

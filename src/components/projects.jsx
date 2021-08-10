@@ -5,11 +5,11 @@ import redirect__URL from '../configs/enlaces';
 
 const ProjectStyled = styled.div`
 	width: 70%;
-	height: 120vh;
+	height: auto;
 	margin: auto;
 	display: flex;
 	flex-direction: column;
-
+	padding-top: 4em;
 	.titles {
 		padding: 1.4em 0;
 		h4 {
@@ -19,7 +19,7 @@ const ProjectStyled = styled.div`
 	.grid {
 	// border: 1px solid green;
 	min-width: 100%;
-	min-height: 80vh;
+	min-height: 660px;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 46% 54%;

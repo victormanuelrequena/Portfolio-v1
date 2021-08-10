@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+import mobilePNG from '../assets/mobile.png';
 
 const AboutMeStyled = styled.div` 
 	// border: 1px solid yellow;
 	width: 70%;
 	height: auto;
-	margin: 4em auto;
+	margin: 0em auto;
 	.about-me-t {
 	// border: 1px solid yellow;
 		color: var(--light-slate);
@@ -83,7 +84,13 @@ const AboutMeStyled = styled.div`
 		justify-content: center;
 		width: 100%;
 		height: auto;
-		border: 1px solid red;
+		img {
+			width: 100%;
+			min-width: 360px;
+			max-width: 400px;
+			height: 360px;
+			margin-top: -2em;
+		}
 	}
 
 	@media screen and (max-width: 765px) {
@@ -106,6 +113,11 @@ const AboutMeStyled = styled.div`
 		.about-me-t::after {
 			width: 40%;
 		}
+		.box {
+		img {
+			margin-top: 0em;
+		}
+	}
 }
  `;
 
@@ -132,7 +144,7 @@ export default function AboutMe() {
 		</ul>
 		</div>
 		<div className="box">
-
+			<img src={mobilePNG} alt="" />
 		</div>
 		</div>
 		</AboutMeStyled>
