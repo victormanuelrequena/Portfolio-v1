@@ -2,28 +2,19 @@ import React, { useState, useRef } from 'react';
 import styled from 'styled-components';
 import ExperienceText from './experience-text';
 
-import {
- Switch,
- Route,
- NavLink,
- useParams
-} from 'react-router-dom';
-
 const ExperienceStyled = styled.div`
-	// border: 1px solid red;
 	display: flex;
 	flex-direction: column;
-	// align-items: center;
 	justify-content: center;
-	width: 50%;
+	width: 60%;
 	height: 80%;
 	margin: 0 auto;
 	padding: 8em 1em 12em 1em;
 	.experience {
-		color: var(--light-slate);
+		color: #ccd6f6;
 		font-size: 28px;
 		position: relative;
-		padding: 1em 1em 1em 1em;
+		padding: 1em 0em 1em 0em;
 		margin: 0;
 	}
 	.experience::before {
@@ -74,7 +65,8 @@ const ExperienceStyled = styled.div`
 		transition: .5s;
 		cursor: pointer;
 		font-family: monospace;
-		font-size: .74rem;
+		font-size: 13px;
+		font-weight: bold;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -88,8 +80,8 @@ const ExperienceStyled = styled.div`
 		border-left: 2px solid var(--green);
 	}
 
-	@media screen and (max-width: 768px) {
-		width: 70%;
+	@media screen and (max-width: 1000px) {
+		width: 90%;
 	}
 
 	@media screen and (max-width: 665px) {
@@ -123,7 +115,17 @@ const ExperienceStyled = styled.div`
  `;
 
 export default function Experience() {
-	const [textList, setTextList] = useState('textWork1');
+	const [zevenSoftware, setZevenSoftware] = useState(true);
+	const [freelance, setFreelance] = useState(false);
+
+	const experienceFreelance = (e) => {
+		setZevenSoftware(false);
+		setFreelance(true);
+	};
+	const experienceZS = (e) => {
+		setZevenSoftware(true);
+		setFreelance(false);
+	};
 
 	return (
 		<ExperienceStyled id="experience">
@@ -132,38 +134,41 @@ export default function Experience() {
 		<div className="box-experience">
 			<div className="box-works">
 			<ul className="tags-works">
-			<li>
-			<NavLink
-				className="tag-work w1"
-				activeClassName="active-line"
-				exact to="/">Zeven Software</NavLink>
+			<li
+			className="tag-work"
+			name="zevenSoftware"
+			onClick={experienceZS}
+			>
+			Zeven Software
 			</li>
-			<li>
-			<NavLink
-				className="tag-work w2"
-				activeClassName="active-line"
-				exact
-				to="/experience/freelance">Freelance</NavLink>
+			<li
+			className="tag-work freelance"
+			name="freelance"
+			onClick={experienceFreelance}
+			>
+			Freelance
 			</li>
 			</ul>
 			</div
 			>
-			<Switch>
-			<Route path="/experience/freelance">
-			<ExperienceText
-			company='Freelance'
-			cargue="Software Developer"
-			text="Write modern, performant, maintainable code for a diverse array of client and internal projects Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript, Gatsby, React, Craft, WordPress, Prismic, and Netlify Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis"
-			/>
-			</Route>
-			<Route path="/">
-			<ExperienceText
-			company='Zeven Software'
-			cargue="Frontend developer"
-			text="Working for the Venezuelan-American company zevenSoftware, in which I am part of the development team as a frontend developer, working with modern frameworks such as Reactjs consuming APIs and implementing unit tests and ETE with testing libraries such as Jest, was a very edifying experience for me and all the goals set as a team were met."
-			/>
-			</Route>
-			</Switch>
+			{
+				freelance
+				? <ExperienceText
+				company='Freelance'
+				cargue="Software Developer"
+				text="Write modern, performant, maintainable code for a diverse array of client and internal projects Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript, Gatsby, React, Craft, WordPress, Prismic, and Netlify Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis"
+				/>
+				: null
+			}
+			{
+				zevenSoftware
+				? <ExperienceText
+					company='Zeven Software'
+					cargue="Frontend developer"
+					text="Working for the Venezuelan-American company zevenSoftware, in which I am part of the development team as a frontend developer, working with modern frameworks such as Reactjs consuming APIs and implementing unit tests and ETE with testing libraries such as Jest, was a very edifying experience for me and all the goals set as a team were met."
+				/>
+				: null
+			}
 		</div>
 		</ExperienceStyled>
 	)

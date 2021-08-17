@@ -17,8 +17,8 @@ html::-webkit-scrollbar-thumb:hover {
 :root {
     scroll-behavior: smooth;
     --dark-navy: #020c1b;
-    --navy: #0a192f;
-    --light-navy: #112240;
+    --navy: rgb(18, 17, 33);
+    --light-navy: rgba(18, 17, 48, .5);
     --lightest-navy: #233554;
     --navy-shadow: rgba(2,12,27,0.7);
     --dark-slate: #495670;
@@ -26,7 +26,7 @@ html::-webkit-scrollbar-thumb:hover {
     --light-slate: #a8b2d1;
     --lightest-slate: #ccd6f6;
     --white: #e6f1ff;
-    --green: rgb(100, 255, 218);
+    --green: rgb(240, 88, 0);
     --green-tint: rgba(100,255,218,0.1);
 }
 

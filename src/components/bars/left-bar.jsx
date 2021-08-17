@@ -50,7 +50,7 @@ const LeftBarStyled = styled.div`
 	color: var(--green);
 	transform: translateY(-6px);
 }
-@media screen and (max-width: 765px) {
+@media screen and (max-width: 900px) {
 	display: none;
 }
 `;

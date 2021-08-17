@@ -1,17 +1,18 @@
 import React, { useState, useRef, useEffect } from 'react';
-import './App.css';
-import Wrapper from './components/wrapper';
-import MenuNav from './components/menu-nav';
-import LeftBar from './components/left-bar';
-import RightBar from './components/right-bar';
-import Presentation from './components/presentation';
-import AboutMe from './components/01about-me';
-import Experience from './components/experience';
-import Work from './components/work';
-import LoadingPage from './components/loading-page';
-// import MenuNavMobile from './components/menu-nav-mobile';
+import 'App.css';
 import styled from 'styled-components';
-import Projects from './components/projects';
+import Wrapper from 'components/wrapper';
+import MenuNav from 'components/bars/menu-nav';
+import LeftBar from 'components/bars/left-bar';
+import RightBar from 'components/bars/right-bar';
+import Presentation from 'components/presentation/presentation';
+import AboutMe from 'components/about-me/01about-me';
+import Experience from 'components/experience/experience';
+import Work from 'components/work/work';
+import LoadingPage from 'components/loading-page';
+// import MenuNavMobile from './components/menu-nav-mobile';
+import Projects from 'components/work/projects';
+import Contact from 'components/contact/Contact';
 
 const MenuNavMobileStyled = styled.div`
   display: none;
@@ -83,6 +84,7 @@ export default function App() {
     <Experience />
     <Work />
     <Projects />
+    <Contact />
     </Wrapper>
     {/*<LoadingPage />*/}
     </div>

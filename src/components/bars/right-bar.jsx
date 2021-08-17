@@ -51,7 +51,7 @@ const RightBarStyled = styled.div`
 	width: 1px;
 	min-height: 200px;
 }
-@media screen and (max-width: 765px) {
+@media screen and (max-width: 900px) {
 	display: none;
 }
 `;

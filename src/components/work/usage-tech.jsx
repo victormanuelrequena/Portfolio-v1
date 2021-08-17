@@ -8,14 +8,18 @@ const UsageTechStyled = styled.ul`
 	padding: 0 1em;
 	margin-top: ${({primaryCard}) => primaryCard ? '1em' : '0em'};
 	column-gap: 1em;
-	justify-content: space-between;
+	flex-wrap: wrap;
 	li { 
-		color: var(--slate);
+		color: var(--light-slate);
 		font-family: monospace;
+		font-weight: 500;
 		font-size: 15px;
 	}
 	@media screen and (max-width: 768px) {
 		justify-content: flex-start;
+		li {
+			color: var(--lightest-slate);
+		}
 	}
  `;
 

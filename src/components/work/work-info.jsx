@@ -5,6 +5,40 @@ import UsageTech from './usage-tech';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LaunchIcon from '@material-ui/icons/Launch';
 
+ export default function WorkInfo({statusProject,
+  projectName,
+   reverse,
+    techList,
+	description,
+	ghEnlace,
+	liveEnlace
+	}) {
+
+ 	return (
+ 	<WorkInfoStyled reverse={reverse}>
+ 			<div className="wrapper-mobile">
+ 			<p className="status-project">{statusProject}</p>
+			<strong className="project-name">{projectName}</strong>
+			<WorkText
+			description={description}
+			/>
+			<UsageTech
+			primaryCard={true}
+			techList={techList}
+			/>
+			<div className="enlaces-project">
+			<a href={ghEnlace} target="_blank">
+			<GitHubIcon style={{marginRight: '1em', fontSize: 22}} />
+			</a>
+			<a href={liveEnlace} target="_blank">
+			<LaunchIcon style={{fontSize: 22}} />
+			</a>
+			</div>
+ 			</div>
+ 	</WorkInfoStyled>
+ 	)
+ }
+
 const WorkInfoStyled = styled.div`
 	// border: 1px solid green;
 	width: 100%;
@@ -13,11 +47,13 @@ const WorkInfoStyled = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: ${({ reverse }) => reverse ? 'flex-start' : 'flex-end'};
+	justify-content: center;
 	.wrapper-mobile {
 		width: 100%;
 		height: 100%;
 		// grid-area: ${({ reverse }) => reverse ? 'image': 'text'};
 		display: flex;
+		justify-content: center;
 		flex-direction: column;
 		align-items: ${({ reverse }) => reverse ? 'flex-start' : 'flex-end'};
 	}
@@ -74,37 +110,17 @@ const WorkInfoStyled = styled.div`
 		width: 100%;
 		margin: 0 auto;
 		margin-top: 1em;
+		z-index: 1;
+		a {
+			color: #a8b2d1;
+			&:hover {color: var(--green);}
+		}
 	}
  `;
 
- export default function WorkInfo({statusProject,
-  projectName,
-   reverse,
-    techList,
-	description
-	}) {
 
- 	return (
- 	<WorkInfoStyled reverse={reverse}>
- 			<div className="wrapper-mobile">
- 			<p className="status-project">{statusProject}</p>
-			<strong className="project-name">{projectName}</strong>
-			<WorkText
-			description={description}
-			/>
-			<UsageTech
-			primaryCard={true}
-			techList={techList}
-			/>
-			<div className="enlaces-project">
-			<a href="">
-			<GitHubIcon style={{color: '#a8b2d1', marginRight: '1em'}} />
-			</a>
-			<a href="">
-			<LaunchIcon style={{color: '#a8b2d1'}} />
-			</a>
-			</div>
- 			</div>
- 	</WorkInfoStyled>
- 	)
- }
+
+
+
+
+

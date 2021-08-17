@@ -4,9 +4,8 @@ import WorkImage from './image-work';
 import WorkInfo from './work-info';
 
 const WorkProjectStyled = styled.div` 
-	// border: 1px solid white;
 	width: 100%;
-	min-height: 380px;
+	height: auto;
 	padding: 1.4em 0;
 	display: grid;
 	grid-template-columns: ${({ reverse }) => reverse ? '40% 60%' : '60% 40%'};
@@ -30,7 +29,9 @@ export default function WorkProject({
    reverse,
    path,
    techList,
-   description
+   description,
+   ghEnlace,
+   liveEnlace
     }) {
 	return (
 		<WorkProjectStyled reverse={reverse}>
@@ -45,6 +46,8 @@ export default function WorkProject({
 		reverse={reverse}
 		techList={techList}
 		description={description}
+		ghEnlace={ghEnlace}
+		liveEnlace={liveEnlace}
 		/>
 		</WorkProjectStyled>
 	)

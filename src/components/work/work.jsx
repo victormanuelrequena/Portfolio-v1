@@ -2,27 +2,27 @@ import React from 'react';
 import styled from 'styled-components';
 import WorkProject from './work-project';
 import Projects from './projects';
-import gmGroupPNG from '../assets/gmgroup.png';
-import octoprofilePNG from '../assets/octoprofile.png'
-import taskAppPNG from '../assets/taskapp.png';
+import gmGroupPNG from 'assets/gmgroup.png';
+import octoprofilePNG from 'assets/octoprofile.png'
+import taskAppPNG from 'assets/taskapp.png';
 
 const WorkStyled = styled.div`
-	// border: 1px solid #f05800;
 	width: 72%;
 	height: auto;
 	display: grid;
 	margin: 0 auto;
 	.work {
-		color: var(--light-slate);
+		color: #ccd6f6;
 		font-size: 28px;
 		position: relative;
-		padding: 0 2em 0 2em;
+		padding: 0;
 		margin: 0;
+		box-sizing: border-box;
 	}
 	.work::before {
 		content: '03. ';
 		font-family: monospace;
-		font-size: 24px;
+		font-size: 22px;
 		font-weight: 100;
 		color: var(--green);
 	}
@@ -46,10 +46,20 @@ const WorkStyled = styled.div`
 	}
 	@media screen and (max-width: 768px) {
 		width: 100%;
+		.work {
+			padding: 0 2.5em;
+		}
 		.work::after {
 			width: 50%;
 		}
 
+	}
+	@media screen and (max-width: 500px) {
+		.work {
+			width: 80%;
+			margin: auto;
+			padding: 0;
+		}
 	}
  `;
 
@@ -65,6 +75,8 @@ const WorkStyled = styled.div`
 		path={gmGroupPNG}
 		techList={['React', 'Material UI', 'Styled-components']}
 		description={"Gmgroup company website, the website has spanish and english support, a dark mode and a contact form."}
+		ghEnlace=""
+		liveEnlace="https://solucionesgm.com/"
 		/>
 		<WorkProject 
 		statusProject="Featured project"
@@ -73,6 +85,8 @@ const WorkStyled = styled.div`
 		path={octoprofilePNG}
 		techList={['React', 'gh-polyglot', 'Styled-components', 'Chart.js']}
 		description={"A nicer look at your GitHub profile and repository stats with data visualizations of your top languages and stars. Sort through your top repos by number of stars, forks, and size."}
+		ghEnlace="https://github.com/victormanuelrequena/octoprofile"
+		liveEnlace="https://victormanuelrequena.github.io/octoprofileReact/"
 		/>
 		<WorkProject 
 		statusProject="Featured project"

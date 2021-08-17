@@ -12,12 +12,12 @@ const ExperienceTextStyled = styled.div`
 	.text {
 		color: var(--slate);
 		line-height: 1.6em;
-		font-size: .8rem;
+		font-size: 18px;
 		margin-top: .4em;
 	}
 	.cargue {
 		// border: 1px solid green;
-		font-size: .9rem;
+		font-size: 20px;
 		font-family: 'Inter', sans-serif;
 		color: var(--lightest-slate);
 		padding: 1em 0;

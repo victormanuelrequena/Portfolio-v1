@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import mobilePNG from '../assets/mobile.png';
+import mobilePNG from 'assets/mobile.png';
 
 const AboutMeStyled = styled.div` 
 	// border: 1px solid yellow;
@@ -9,7 +9,7 @@ const AboutMeStyled = styled.div`
 	margin: 0em auto;
 	.about-me-t {
 	// border: 1px solid yellow;
-		color: var(--light-slate);
+		color: #ccd6f6;
 		font-size: 28px;
 		position: relative;
 		padding: .6em 0;
@@ -52,6 +52,10 @@ const AboutMeStyled = styled.div`
 		line-height: 1.5em;
 		margin: 0;
 		padding-top: .6em;
+		span {
+			font-weight: bold;
+			color: var(--green);
+		}
 	}
 	.tech-tags {
 		// border: 1px solid red;
@@ -128,11 +132,13 @@ export default function AboutMe() {
 		<div className="box-about-me">
 		<div className="about-1">
 		<p className="text-about">
-		Hello! My name is Brittany and I enjoy creating things that live on the internet. My interest in web development started back in 2012 when I decided to try editing custom Tumblr themes — turns out hacking together a custom reblog button taught me a lot about HTML & CSS!
-
-		Fast-forward to today, and I've had the privilege of working at an advertising agency, a start-up, a huge corporation, and a student-led design studio. My main focus these days is building accessible, inclusive products and digital experiences at Upstatement for a variety of clients.
-
-		Here are a few technologies I've been working with recently:
+			Hello, my name is Victor requena, I am 18 years old and I am from Venezuela, I love to create amazing applications.  I was interested in web and mobile application development back in the year 2020 (too long) I started with html and <span>CSS</span> and when I found Javascript I fell completely in love, and until today's sun is my toxic relationship, we have adopted a son his name is <span>Reactjs</span> and I love him madly! (we plan to continue adopting).
+				<br />
+				<br />
+			 My interests are first of all God, I like history, Football, I like to learn new things (but specializing in what I learn is my main goal) I'm always looking for my best version across the board.
+			 <br />
+			 <br />
+			 Here are a few technologies I've been working with recently:
 		</p>
 		<ul className="tech-tags">
 		<li className="tech-tag">CSS</li>

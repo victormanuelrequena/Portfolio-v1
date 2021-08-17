@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const PresentationStyled = styled.div`
+	// border: 1px solid red;
 	width: 84%;
 	min-height: 80vh;
 	margin: auto;
@@ -12,6 +13,7 @@ const PresentationStyled = styled.div`
 		height: 90%;
 		margin: auto;
 		margin-top: 60px;
+		padding: 2em 0em 0em 2em;
 	}
 	.mi-name-is {
 		color: var(--green);
@@ -22,8 +24,11 @@ const PresentationStyled = styled.div`
 		padding: 0;
 		margin: 0;
 		font-family: 'inter', sans-serif;
-		font-size: 3.4rem;
+		font-size: clamp(40px, 8vw, 80px);
 		color: var(--lightest-slate);
+	}
+	.name {
+		margin-top: .4em;
 	}
 	.sub-title {
 		color: var(--slate);
@@ -84,7 +89,7 @@ export default function Presentation() {
 				<h1 className="name">Victor Requena.</h1>
 				<h2 className="sub-title">I build things for the web.</h2>
 				<div className="text">
-				<p>I'm a Boston-based software engineer who specializes in building (and occasionally designing) exceptional digital experiences. Currently, I'm an engineer at Upstatement focused on building accessible, human-centered products.
+				<p>I am a Frontend developer based in Venezuela. Enjoy creating apps for the web, making the most challenging designs a reality. (which I can elaborate from time to time).
 				</p>
 				</div>
 				<button className="btn-get-in-touch">Get In Touch</button>

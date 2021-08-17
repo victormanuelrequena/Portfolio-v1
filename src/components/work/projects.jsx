@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import ProjectCard from './project-card';
-import redirect__URL from '../configs/enlaces';
+import redirect__URL from 'configs/enlaces';
 
 const ProjectStyled = styled.div`
 	width: 70%;
@@ -10,6 +10,7 @@ const ProjectStyled = styled.div`
 	display: flex;
 	flex-direction: column;
 	padding-top: 4em;
+	padding-bottom: 4em;
 	.titles {
 		padding: 1.4em 0;
 		h4 {
@@ -74,34 +75,40 @@ export default function Projects() {
 			</div>
 			<div className="grid">
 			<ProjectCard
-				listTech={[]}
+				listTech={['React.js', 'Styled-components']}
 				projectName="Rock Paper Sccisors"
 				githubURL={rock_paper_sccisors}
+				description="This is my resolution to frontend mentor challenge of a game of rock paper sccisors."
 			/>
 			<ProjectCard
-				listTech={['React', 'GIPHY API', 'Wouter']}
-				projectName="GIFFY"
-				githubURL=""
+				listTech={['React.js', 'CoinGecko API']}
+				projectName="CoinGecko-api"
+				githubURL="https://github.com/victormanuelrequena/CoinGecko-api"
+				description="This is a simple app of prices of crypto, using the api of CoinGecko."
 			/>
 			<ProjectCard
-				listTech={['React Native', 'Firebase']}
-				projectName="Climate App"
+				listTech={['React.js', 'Styled-components', 'Firebase']}
+				projectName="Twitter Clone"
 				githubURL=""
+				description=""
 			/>
 			<ProjectCard
 				listTech={['React', 'Material UI']}
 				projectName="Portfolio"
 				githubURL=""
+				description=""
 			/>
 			<ProjectCard
 				listTech={['React', 'Material UI']}
 				projectName="Covid 19 Tracker"
 				githubURL=""
+				description=""
 			/>
 			<ProjectCard
 				listTech={['JavaScript', 'CSS', 'HTML']}
 				projectName="Rock Paper Sccisors"
 				githubURL=""
+				description=""
 			/>
 			</div>
 		</ProjectStyled>

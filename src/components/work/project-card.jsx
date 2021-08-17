@@ -14,7 +14,7 @@ const ProjectCardStyled = styled.div`
 	border-radius: 4px;
 	background: var(--light-navy);
 	display: grid;
- 	grid-template-rows: 20% 70% 10%;
+ 	grid-template-rows: 20% 60% 20%;
  	padding-top: 1em;
  	cursor: pointer;
  	transition: .4s;
@@ -86,8 +86,9 @@ const ProjectCardStyled = styled.div`
  		padding: .0em .0em .8em .0em;
  	}
  	.tech-box {
- 		// border: 1px solid red;
  		width: 84%;
+ 		display: flex;
+ 		align-items: center;
  		height: 100%;
  		margin: auto;
  		// margin-top: -.4em;
@@ -101,7 +102,7 @@ const ProjectCardStyled = styled.div`
  	}
 `;
 
-export default function ProjectCard({ projectName, listTech, githubURL }) {
+export default function ProjectCard({ projectName, listTech, githubURL, description }) {
 	return (
 		<ProjectCardStyled>
 			<div className="links">
@@ -110,16 +111,14 @@ export default function ProjectCard({ projectName, listTech, githubURL }) {
 			</div>
 			<div className="link-box">
 				<LinkIcon className="icon-light" style={{fontSize: 30}} />
-				<a href={githubURL}>
+				<a href={githubURL} target="_blank">
 				<GitHubIcon className="icon-light" style={{fontSize: 25}} />
 				</a>
 			</div>
 				</div>
 				<div className="description-project">
 					<strong className='title-description'>{projectName}</strong>
-					<p className="description-text">
-						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi labore totam expedita adipisci veniam illo molestias? Quo ipsa, aperiam doloremque distinctio .
-					</p>
+					<p className="description-text">{description}</p>
 				</div>
 				<div className="tech-box">
 					<UsageTech techList={listTech} />

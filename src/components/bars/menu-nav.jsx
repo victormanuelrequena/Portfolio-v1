@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Divide as Hamburger } from 'hamburger-react';
 import MenuNavMobile from './menu-nav-mobile';
-import '../App.css';
-import logoSmall from '../assets/logo-small.png';
+import 'App.css';
+import logoSmall from 'assets/logo-small.png';
 
 const MenuNavStyled = styled.div`
 	width: 100%;
